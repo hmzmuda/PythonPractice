@@ -1,0 +1,29 @@
+#Assignment 1 in Python practice
+#Tasks:
+    #1 Program to accept user input
+    #2 Program to accept and respond to user input
+    #3 Program to take all info and write to a file
+    #4 Program to read data from .csv file, do simple statistic, display data using mathplotlib
+
+#Script Begins
+
+print("Assignment 1")
+
+#Problem 1 and 2: Request User input and respond
+print("Task 1")
+name = input("Please enter your full name: ")
+print("Hello", name)
+
+#Problem 3: Take info and write to a file
+data = input("Please enter an array of random numbers: ")
+file = open("Assignment1.txt", "w+")
+answer = input("Would you like to add array to Assignment1.txt? yes or no ")
+if answer == "yes":
+    file.write(" %s\r\n" % data)
+    file.close
+else:
+    print("No data will be added")
+    file.close
+
+
+#Script Ends
