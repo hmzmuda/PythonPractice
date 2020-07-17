@@ -29,14 +29,8 @@ if answer == "yes":
 else:
     print("No data will be added")
     file.close
-#Problem 4: read in a .csv file and manipulate data. Use mathplotlib to display data
-#initalize list of field names and rows
-field = []
-rows = []
-cols = []
-studentScore = []
-studentIncome = []
 
+#Problem 4: read in a .csv file and manipulate data. Use mathplotlib to display data
 #read in csv file using pandas module
 fileTask4 = pd.read_csv("Assignment1Students.csv")
 #Print the csv table
@@ -46,6 +40,13 @@ print(fileTask4['Test Scores'].describe())
 #Statistics for the Income
 print(fileTask4['Family Income'].describe())
 #Displaying data using matplotlib
+x = fileTask4['Test Scores']
+y = fileTask4['Family Income']
+plt.scatter(x,y)
+plt.xlabel('Test Scores (%)')
+plt.ylabel('Family Income ($)')
+plt.title('Test Scores from a class vs. Family Income')
+plt.show()
 
 
 #Script Ends
