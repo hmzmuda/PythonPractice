@@ -13,7 +13,6 @@ import matplotlib.pyplot as plt
 #Script Begins
 
 print("Assignment 1")
-
 #Problem 1 and 2: Request User input and respond
 print("Task 1")
 name = input("Please enter your full name: ")
@@ -46,6 +45,7 @@ plt.scatter(x,y)
 plt.xlabel('Test Scores (%)')
 plt.ylabel('Family Income ($)')
 plt.title('Test Scores from a class vs. Family Income')
+plt.grid(color='black', linestyle='-', linewidth=0.5)
 plt.show()
 
 
