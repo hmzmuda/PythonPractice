@@ -4,6 +4,10 @@
     #2 Program to accept and respond to user input
     #3 Program to take all info and write to a file
     #4 Program to read data from .csv file, do simple statistic, display data using mathplotlib
+#git commit after task 3, continue with task 4
+import csv
+import pandas as pd
+import numpy as np
 
 #Script Begins
 
@@ -24,6 +28,17 @@ if answer == "yes":
 else:
     print("No data will be added")
     file.close
+#Problem 4: read in a .csv file and manipulate data. Use mathplotlib to display data
+#initalize list of field names and rows
+field = []
+rows = []
+cols = []
+studentScore = []
+studentIncome = []
 
+#read in csv file using pandas module
+fileTask4 = pd.read_csv("Assignment1Students.csv")
 
+print(fileTask4)
+print(fileTask4.dtypes)
 #Script Ends
