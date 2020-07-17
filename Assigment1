@@ -8,6 +8,7 @@
 import csv
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
 #Script Begins
 
@@ -38,7 +39,13 @@ studentIncome = []
 
 #read in csv file using pandas module
 fileTask4 = pd.read_csv("Assignment1Students.csv")
-
+#Print the csv table
 print(fileTask4)
-print(fileTask4.dtypes)
+#Statitics for the grades
+print(fileTask4['Test Scores'].describe())
+#Statistics for the Income
+print(fileTask4['Family Income'].describe())
+#Displaying data using matplotlib
+
+
 #Script Ends
