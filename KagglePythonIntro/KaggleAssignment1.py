@@ -17,3 +17,13 @@ print("Floor Division")
 print(5 // 2)
 print(6 // 2)
 #REMEMBER, Python follows PEMDAS (order of operation)
+#Built-in functions: min and max
+print("Built in functions: Min and Max")
+print(min(1, 2, 3))
+print(max(1, 2, 3))
+#Changing data type using built-in functions
+print("Built-in functions for changing data type")
+print(float(10))
+print(int(3.5456))
+#They can even be called strings
+print(int('807') + 1)
