@@ -40,4 +40,24 @@ planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', '
 planetsInital = {planet: planet[0] for planet in planets}
 print(planetsInital)
 
-help(str)
+def word_search(doc_list, keyword):
+    """
+    Takes a list of documents (each document is a string) and a keyword. 
+    Returns list of the index values into the original list for all documents 
+    containing the keyword.
+
+    Example:
+    doc_list = ["The Learn Python Challenge Casino.", "They bought a car", "Casinoville"]
+    >>> word_search(doc_list, 'casino')
+    >>> [0]
+    """
+    output = []
+    for index, title in enumerate(doc_list):
+        newTitle = title.split()
+        normalized = [word.rstrip(',.').lower() for word in newTitle]
+        if keyword.lower() in normalized:
+            output.append(index)
+    return output
+
+doc_list = ["The Learn Python Challenge Casino.", "They bought a car", "Casinoville"]
+word_search(doc_list,"casino")
