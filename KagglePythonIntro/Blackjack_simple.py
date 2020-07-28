@@ -54,4 +54,4 @@ def helping_hand(hand):
     else:
         return hand_score
 
-blackjack_hand_greater_than(['J','A'], [6])
+blackjack_hand_greater_than(['J','A', '5'], ['6', 'K', 'A'])
